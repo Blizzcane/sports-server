@@ -27,6 +27,12 @@ def get_games():
     #     }
     #     games_list.append(game_dict)
     # return jsonify(games_list)
+@app.route("/games")
+def get_games_again():
+    board = scoreboard.ScoreBoard()
+    return scoreboard.ScoreBoard().get_json()
+ 
+
 
 if __name__ == "__main__": 
     app.run()
